@@ -1,5 +1,5 @@
 {
-  "name": "sp19-bcs-009",
+  "name": "sp19-bcs-012",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:5000/hostelApplicants",
@@ -13,7 +13,12 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.2"
+    "web-vitals": "^2.1.2",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.4",
+    "nodemon": "^2.0.15"
   },
   "scripts": {
     "start": "react-scripts start",
