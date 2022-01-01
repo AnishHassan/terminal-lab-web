@@ -28,6 +28,8 @@ const ViewApplicant = () => {
             <tr>
               <td>{details.studentName}</td>
               <td>{details.registrationNumber}</td>
+              <td><button type="button" class="btn btn-primary">Update</button></td>
+              <td><button type="button" class="btn btn-danger">Delete</button></td>
             </tr>
           ))}
         </tbody>
