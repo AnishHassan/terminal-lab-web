@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import { Routes, Route } from 'react-router-dom';
 import AddApplicant from './components/AddApplicant';
 import ViewApplicant from './components/ViewApplicant';
+import UpdateRecord from "./components/UpdateRecord";
+import DeleteRecord from "./components/DeleteRecord";
 
 function App() {
   return (
@@ -13,6 +15,14 @@ function App() {
         <Route
           path="/viewApplicants"
           element={<ViewApplicant />}
+        />
+         <Route
+          path="/update-record"
+          element={<UpdateRecord/>}
+        />
+         <Route
+          path="/delete-record"
+          element={<DeleteRecord/>}
         />
       </Routes>
     </div>

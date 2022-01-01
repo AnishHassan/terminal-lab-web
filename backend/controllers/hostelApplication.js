@@ -1,5 +1,4 @@
 import hostelApplicationModel from "../models/hostelApplication.js";
-
 export const getApplications = async (req, res) => {
     try {
         const hostelApplications = await hostelApplicationModel.find();
@@ -9,6 +8,8 @@ export const getApplications = async (req, res) => {
     }
 };
 
+
+
 export const createApplication = async (req, res) => {
     const studentName = req.body.studentName;
     const studentNameInStringFormat = studentName.toString();
@@ -16,9 +17,17 @@ export const createApplication = async (req, res) => {
     const registrationNumber = req.body.registrationNumber;
     const registrationNumberInString = registrationNumber.toString();
 
+    const hostelPreference = req.body.hostelPreference;
+    const hostelPreferenceInString = hostelPreference.toString();
+
+    const gender = req.body.gender;
+    const genderInString = gender.toString();
+
     const newApplicant = new hostelApplicationModel({
         studentName: studentNameInStringFormat,
-        registrationNumber: registrationNumberInString
+        registrationNumber: registrationNumberInString,
+        hostelPreference:hostelPreferenceInString,
+        gender : genderInString
     });
 
     try {
@@ -28,3 +37,10 @@ export const createApplication = async (req, res) => {
         console.log("Not saved...");
     }
 };
+
+export const deleteRecord = async (req, res) => {
+    const hostelApplications = await hostelApplicationModel.find();
+    hostelApplications.findByIdAndDelete(req.params.id)
+      .then(() => res.json('Applicant deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  }

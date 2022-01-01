@@ -1,5 +1,5 @@
 import express from 'express';
-import { getApplications, createApplication } from '../controllers/hostelApplication.js';
+import { getApplications, createApplication,deleteRecord } from '../controllers/hostelApplication.js';
 
 const router = express.Router();
 
@@ -7,5 +7,8 @@ const router = express.Router();
 router.get("/", getApplications);
 
 router.post("/", createApplication);
+
+router.delete('/:id',deleteRecord);
+
 
 export default router;

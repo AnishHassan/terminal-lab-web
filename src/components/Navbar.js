@@ -13,6 +13,12 @@ const Navbar = () => {
           <Link to="/viewApplicants" className="ms-5 me-5 text-decoration-none text-white">
             View-Applicants
           </Link>
+          <Link to="/update-record" className="ms-5 me-5 text-decoration-none text-white">
+            Update Record
+          </Link>
+          <Link to="/delete-record" className="ms-5 me-5 text-decoration-none text-white">
+            Delete Record
+          </Link>
         </div>
       </div>
     );
